@@ -2,8 +2,8 @@ const btnEnviar = document.getElementById('btn-enviar');
 
 const validación = (e) => {
   e.preventDefault();
-  const nombreDeUsuario = document.getElementById('usuario');
-  const direcciónEmail = document.getElementById('email');
+  const name = document.getElementById('usuario');
+  const email = document.getElementById('email');
   if (usuario.value === "") {
     alert("Por favor, escribe tu nombre de usuario.");
     usuario.focus();
