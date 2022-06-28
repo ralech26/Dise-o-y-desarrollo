@@ -1,39 +1,34 @@
-const btnEnviar = document.getElementById('btn-enviar');
+const nombre = document.getElementById("name")
+const email = document.getElementById("email")
+const msj = document.getElementById("text")
+const form = document.getElementById("form")
+const parrafo = document.getElementById("warnings")
 
-const validación = (e) => {
-  e.preventDefault();
-  const name = document.getElementById('usuario');
-  const email = document.getElementById('email');
-  if (usuario.value === "") {
-    alert("Por favor, escribe tu nombre de usuario.");
-    usuario.focus();
-    return false;
-  }
-    
-  if (email.value === "") {
-    alert("Por favor, escribe tu correo electrónico");
-    email.focus();
-    return false;
-  }
+form.addEventListener("submit", e=>{
+    e.preventDefault()
+    let warnings = ""
+    let entrar = false;
+    let regexEmail = /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,4})+$/
+    parrafo.innerHTML = ""
+    if(nombre.value.length <4){
+        warnings += `El nombre no es valido <br>`
+        entrar = true;
+    }
+    if(!regexEmail.test(email.value)){
+        warnings += `El email no es valido <br>`
+        entrar = true;
+    }
+    if(msj.value.length <1){
+        warnings += `Pocos caracteres <br>`
+        entrar = true;
+    }
 
-  if (!emailVálido(email.value)) {
-    alert("Por favor, escribe un correo electrónico válido");
-    emailAddress.focus();
-    return false;
-  }
-  
-  return true; //Se pueden enviar los datos del formulario al servidor
-}
-
-const emailVálido = email => {
-  return /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email);
-}
-
-submitBtn.addEventListener('click', validate);
-let typewriter = new Typewriter(app, {
-  loop: true,
-  delay: 75,
-});
+    if(entrar){
+        parrafo.innerHTML = "el mensaje es muy corto";
+    }else{
+        parrafo.innerHTML = "Enviado";
+    }
+})
  
 typewriter
   .pauseFor(2500)
