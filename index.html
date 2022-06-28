@@ -187,42 +187,37 @@
 <!--========================================================== -->
                       <!-- formulario -->
 <!--========================================================== -->
-
-  <div class="container  border-top border-danger " style="max-width: 500px" id="contenedor-formulario">
-      <div class="text-center mb-4" id="titulo-formulario">
-        <div><img src="./img/support.png" alt="" class="img-fluid ps-5"></div>
-        <h2>Contactanos</h2>
-        <p class="fs-5">Estamos aqui para escuchar tus pedidos</p>
-      </div>
-
-     
-
-      <form   method="POST" data-netlify="true" action="#">     
-            <div class= "mb-3">           
-              <input type="email" class="form-control" id="email" name="email" placeholder="nombre@ejemplo.com">
-            </div>
- 
-          
-            <div class="mb-3">            
-              <input type="input" class="form-control" id="name" name="name" placeholder="John Doe">
-            </div>
-      
-
-            <div class="mb-3">
-              <input type="tel" class="form-control" name="phone" id="phone" placeholder="Teléfono">
-            </div>
-
-          <div class="mb-3">       
-            <textarea class="form-control" name="message" id="message" rows="4"></textarea>
-          </div>
-
-          <div class="mb-3">
-            <button type="submit" class=" btn btn-danger w-100 fs-5">Enviar Mensaje</button>
-          </div>
-      </form>
-  
+<div class="container  border-top border-danger " style="max-width: 500px" id="contenedor-formulario">
   </div>
-</section>
+  <input type="checkbox" id="check">
+  <label for="check" class="bar-btn">
+      <i class="fas fa-bars"></i>
+  </label>
+
+<main class="m-register">
+<form action="" method="POST" id="form">
+  <div class="form">
+      <h1>Estamos aquí para escuchar sus pedidos</h1>
+      <div class="grupo">
+          <input type="text" name="" id="name" ><span class="barra"></span>
+          <label for="">Nombre:</label>
+      </div>
+      <div class="grupo">
+          <input type="email" name="" id="email" ><span class="barra"></span>
+          <label for="">Email:</label>
+      </div>
+      <div class="grupo">
+          <input type="text" name="" id="text" ><span class="barra"></span>
+          <label for="">Ingrese su Mensaje:</label>
+      </div>
+      
+      <button type="submit">Enviar</button>
+      <p class="warnings" id="warnings"></p>
+  </div>
+</form>
+<script src="macarons.js"></script>
+
+</main>
 
 
 <!--========================================================== -->
